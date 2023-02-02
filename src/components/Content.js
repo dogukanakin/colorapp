@@ -8,6 +8,11 @@ import Loader from "./Loader";
 
 function Content() {
   const { brands, selectedBrands } = useContext(MainContext);
+  const rowRender = (key, index) => {
+    return (
+      <Brand key={key} brand={brands[index]} />
+    );
+  };
 
   return (
     <main className="content">
